@@ -1,11 +1,11 @@
-package az.iktlab.groupsipweb.repository;
+package az.iktlab.bookstore.repository;
 
-import az.iktlab.groupsipweb.entity.Account;
+import az.iktlab.bookstore.model.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account,Long> {
 
-    Account findByUsername(String username);
+    boolean existsByUsername(String username);
 }
