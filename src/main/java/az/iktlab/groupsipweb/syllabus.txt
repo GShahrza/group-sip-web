@@ -1,0 +1,147 @@
+Java EE Syllabus
+
+
+1)	Welcome to new world of the Java and Spring Boot
+
+1. Introduction to Java EE
+2. General concept of Java EE
+3. What is Spring
+4. How to learn Spring
+5. How to use Spring
+6. Generate new Spring boot application
+7. How to use Postman
+8. Java configuration and the Spring application context
+
+2)	Java and Web
+1.	What is HTTP
+2.	HTTP methods
+3.	Get, Post, Put, Patch, Delete
+4.	Data formats
+5.	What is JSON and XML
+6.	What is REST
+7.	Restful web services
+8.	Rest API
+9.	What is SOAP
+10.	Difference between REST and SOAP
+
+3)	Spring and annotation love
+1.	What is Jakson
+2.	What is ObjectMapper
+3.	@Controller and @RestController
+4.	@RequestMapping
+5.	@RequestParameter
+6.	@PathVariable
+7.	@RequestBody
+8.	@GetMapping
+9.	@PostMapping
+10.	@PutMapping
+11.	@PatchMapping
+12.	@DeleteMapping
+
+4)	Spring and mini world
+1.	What is Spring container
+2.	Spring application context
+3.	Spring @Bean and scopes
+4.	EJB bean and scopes
+5.	@Spring vs EJB
+6.	What is Lombok
+7.	@Getter and @Setter
+8.	@NoArgConstructor
+        @AllArgsConstructor
+        @RequiredArgConstructor
+9.	@Data
+10.	@Equals and @Hashcode
+11.	@ToString
+12.	@Builder
+13.	@PostConstructor
+
+5)	Today is Pattern day
+1.	Design Patterns
+2.	What is design pattern
+3.	Facade Design pattern
+4.	Factory design pattern
+5.	Builder design pattern
+6.	Abstract Factory design pattern
+7.	Prototype design pattern
+8.	Singleton design pattern
+9.	DAO (Data Access Object) design pattern
+10.	DTO (Data Transfer Object) design pattern
+11.	MVC (Model View and Controller) design pattern
+12.	Dependency Injection design pattern
+13.	Inversion of Control
+
+6)	Data is everywhere…
+1.	What is @Component
+2.	What is @Configuration
+3.	What is AutoConfiguration
+4.	@Autowired
+5.	JPA intro
+6.	JPA (application properties)
+7.	JPA and Hibernate
+8.	JPA structure and architecture
+9.	Spring data
+
+7)	How many annotation we can save in our local machine (brain)?
+1.	@Entity
+2.	@Table
+3.	@Id
+4.	@GeneratedValue
+5.	@Column
+6.	@Enumerated
+7.	@CreationTimeStamp
+8.	@UpdateTimeStamp
+9.	Foreign key
+10.	Relational Mappings
+11.	OTM
+12.	MTO
+13.	OTO
+14.	MTM
+15.	@JoinTable
+16.	@JoinColumn
+
+8)	Can you imagine the holidays without salad? This is same thing for Spring boot and CSR
+1.	@Repository
+2.	@Service
+3.	CSR (Controller – Service - Repository)
+4.	Rest template
+5.	Feign client
+
+9)	Because everyone who is new to programming wants to be a hacker
+1.	Spring Security
+2.	Configure Spring Security for HTTP BASIC authentication
+3.	Implement form-based authentication
+4.	Configure other authentication features including remember-me, anonymous users, and logout
+5.	Apply authorization constraints to URLs and URL patterns
+6.	Bind authorization roles to user accounts in relational databases
+7.	Plug application-specific user realms into Spring Security by implementing UserDetailsService
+8.	Implement application-specific authorization constraints as AccessDecisionVoters
+9.	Fix authorization constraints over individual methods of service beans, in lieu of URL authorization or in tandem with it
+10.	Bearer tokens
+11.	JWT
+
+10)	Great success comes from small steps
+1.	Microservice architecture
+2.	What is Cloud Native architecture
+3.	Practical microservices
+
+11)	This is how organizations work
+1.	What is Docker
+2.	What is Container
+3.	Docker images
+4.	Docker Compose
+5.	Docker swarm
+6.	Kubernetes
+7.	Kibana
+8.	Other new technologies…
+
+12)	I am Human and sometimes I can forget 
+1.	Logging
+2.	Swagger
+3.	liquibase
+
+13)	My recommendations
+1.	Agile
+2.	Agile mindset
+3.	Agile scrum
+4.	Some recommendations…
+5.	Closing ceremony
