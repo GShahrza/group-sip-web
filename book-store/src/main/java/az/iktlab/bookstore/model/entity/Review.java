@@ -20,8 +20,13 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(name = "review_text")
     String reviewText;
 
+    @Column(name = "like_count",columnDefinition = "INT default 0")
+    Integer likeCount;
+
+    @Column(name = "reviewDate",columnDefinition = "timestamp default now()")
     LocalDateTime reviewDate;
 
     @ManyToOne
@@ -31,13 +36,4 @@ public class Review {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     User user;
-
-    /*
-    review_id (rəyin identifikatoru)
-book_id (kitabın identifikatoru)
-user_id (istifadəçinin identifikatoru)
-review_text (rəy mətni)
-rating (kitabın reytinqi)
-review_date (rəy tarixi)
-     */
 }

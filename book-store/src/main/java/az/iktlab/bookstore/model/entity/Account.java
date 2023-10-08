@@ -23,16 +23,16 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name = "username",unique = true)
+    @Column(name = "username", unique = true)
     String username;
 
     @Column(name = "password")
     String password;
 
-    @Column(name = "is_active",columnDefinition = "boolean default true")
-    boolean isActive;
+    @Column(name = "is_active",columnDefinition = "BOOLEAN default TRUE")
+    boolean isActive = true;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             joinColumns = @JoinColumn(name = "account_id",referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id")

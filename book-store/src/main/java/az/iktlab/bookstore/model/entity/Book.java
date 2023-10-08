@@ -25,15 +25,14 @@ public class Book {
 
     String synopsis;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
     Set<Review> reviews;
 
-    /*
-    title (kitabın adı)
-author_id (müəllifin identifikatoru)
-genre_id (janrın identifikatoru)
-publication_date (nəşr tarixi)
-synopsis (kitabın təsviri)
-average_rating (ortalama reytinq)
-     */
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "Author_Book",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id")
+    )
+    Set<Author> authors;
 }
