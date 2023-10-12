@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -23,10 +24,11 @@ public class Author {
     @Column(name = "full_name")
     String fullName;
 
-    @Column(name = "biography")
+    @Column(name = "biography",columnDefinition = "TEXT")
     String biography;
 
     @Column(name = "date_of_birth")
-    LocalDateTime dateOfBirth;
+    @Temporal(value = TemporalType.DATE)
+    Date dateOfBirth;
 
 }

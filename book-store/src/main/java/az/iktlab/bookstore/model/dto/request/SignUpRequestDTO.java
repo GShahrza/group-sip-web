@@ -16,7 +16,7 @@ public class SignUpRequestDTO {
     @NotNull
     String firstName;
 
-    @NotEmpty
+    @NotEmpty(message = "last name can not empty!")
     String lastName;
 
     @Email
@@ -25,9 +25,8 @@ public class SignUpRequestDTO {
     @NotBlank
     String contactNumber;
 
-    @Max(15)
     String username;
 
-    @Pattern(regexp = "[0-9]")
+    @Pattern(regexp = "[0-9]+")
     String password;
 }

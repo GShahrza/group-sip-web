@@ -21,8 +21,10 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(name = "title")
     String title;
 
+    @Column(name = "synopsis",columnDefinition = "TEXT")
     String synopsis;
 
     @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
@@ -30,7 +32,15 @@ public class Book {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "Author_Book",
+            name = "books_genres",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    Set<Genre> genres;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "authors_books",
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id")
     )

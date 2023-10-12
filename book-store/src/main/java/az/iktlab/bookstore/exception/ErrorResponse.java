@@ -1,16 +1,19 @@
-package az.iktlab.bookstore.model.dto.response;
+package az.iktlab.bookstore.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountResponseDTO {
+public class ErrorResponse {
 
-    String username;
-    String password;
+    int statusCode;
+    String message;
+    LocalDateTime localDateTime;
 }

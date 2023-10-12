@@ -66,8 +66,8 @@
 5.	JPA intro` +
 6.	JPA (application properties)
 7.	JPA and Hibernate +
-8.	JPA structure and architecture
-9.	Spring data
+8.	JPA structure and architecture +
+9.	Spring data +
 
 7)	How many annotation we can save in our local machine (brain)?
 1.	@Entity +
@@ -88,8 +88,13 @@
 16.	@JoinColumn +
 
 8)	Can you imagine the holidays without salad? This is same thing for Spring boot and CSR
-1.	@Repository
-2.	@Service
-3.	CSR (Controller – Service - Repository)
+1.	@Repository +
+2.	@Service +
+3.	CSR (Controller – Service - Repository) +
 4.	Rest template
 5.	Feign client
+
+12)	I am Human and sometimes I can forget 
+1.	Logging
+2.	Swagger
+3.	liquibase
