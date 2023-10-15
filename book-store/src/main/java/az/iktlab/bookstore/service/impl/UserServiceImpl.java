@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -28,9 +29,11 @@ public class UserServiceImpl implements UserService {
 
     private final UserMapper userMapper;
 
-    public List<User> getAllUsers(int page, int size) {
+    public List<UserResponseDTO> getAllUsers(int page, int size) {
         Pageable paging = PageRequest.of(page, size);
-        return userRepository.findAll(paging).getContent();
+        return userRepository.findAll(paging).getContent().stream()
+                .map(userMapper::userToUserResponseDTO)
+                .collect(Collectors.toList());
     }
 
     @Override

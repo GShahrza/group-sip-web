@@ -12,7 +12,7 @@ public interface UserService {
 
     boolean addUser(SignUpRequestDTO signUpRequestDTO);
 
-    List<User> getAllUsers(int page, int size);
+    List<UserResponseDTO> getAllUsers(int page, int size);
 
     UserResponseDTO getUserById(Long id);
 

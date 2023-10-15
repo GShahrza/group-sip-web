@@ -29,11 +29,11 @@ public class Review {
     @Column(name = "reviewDate",columnDefinition = "timestamp default now()")
     LocalDateTime reviewDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     Book book;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     User user;
 }

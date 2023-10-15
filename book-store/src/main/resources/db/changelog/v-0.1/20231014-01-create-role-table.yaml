@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023101401
+      author: shahrzagahramanov
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: role_name
+                  type: VARCHAR(255)
+  - changeSet:
+      id: addColumn-example
+      author: liquibase-docs
+      changes:
+        - addColumn:
+            tableName: roles
+            columns:
+              - column:
+                  name: middlename
+                  type: varchar(50)

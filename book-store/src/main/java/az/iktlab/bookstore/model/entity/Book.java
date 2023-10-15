@@ -27,10 +27,10 @@ public class Book {
     @Column(name = "synopsis",columnDefinition = "TEXT")
     String synopsis;
 
-    @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "book")
     Set<Review> reviews;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "books_genres",
             joinColumns = @JoinColumn(name = "book_id"),
@@ -38,7 +38,7 @@ public class Book {
     )
     Set<Genre> genres;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "authors_books",
             joinColumns = @JoinColumn(name = "book_id"),

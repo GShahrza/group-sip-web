@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAllUsers(@RequestParam(defaultValue = "0") int page,
+    public List<UserResponseDTO> getAllUsers(@RequestParam(defaultValue = "0") int page,
                                   @RequestParam(defaultValue = "2") int size) {
         return userService.getAllUsers(page, size);
     }

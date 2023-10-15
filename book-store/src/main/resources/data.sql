@@ -60,3 +60,16 @@ values (1,1),
        (1,3),
        (2,1),
        (2,2);
+
+
+insert into reviews(review_text, book_id, user_id)
+values ('review example 0',1,1),
+       ('review example 1',1,2),
+       ('review example 2',1,3),
+       ('review example 3',1,4),
+       ('review example 4',1,5),
+       ('review example 5',2,1),
+       ('review example 6',2,2),
+       ('review example 7',2,3),
+       ('review example 8',2,4),
+       ('review example 9',2,5);

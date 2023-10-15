@@ -1,6 +1,7 @@
 package az.iktlab.bookstore.service;
 
 import az.iktlab.bookstore.model.dto.request.ReviewRequestDTO;
+import az.iktlab.bookstore.model.dto.response.ReviewResponseDTO;
 import az.iktlab.bookstore.model.entity.Review;
 import org.springframework.data.domain.Sort;
 
@@ -15,4 +16,7 @@ public interface ReviewService {
     boolean addReview(Long userId, Long bookId, ReviewRequestDTO reviewRequestDTO);
 
     boolean deleteReview(Long userId, Long bookId, Long reviewId);
+
+    List<ReviewResponseDTO> getAllReviews();
+
 }

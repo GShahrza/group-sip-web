@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: qweR
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+#    defer-datasource-initialization: true
+    open-in-view: false
+#  sql:
+#    init:
+#      mode: always
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+    #spring.datasource.url= jdbc:postgresql://localhost:5432/postgres
+      #spring.datasource.username=postgres
+      #spring.datasource.password=qweR
+      #
+      #spring.jpa.hibernate.ddl-auto=create
+      #spring.jpa.show-sql=true
+      #
+      #spring.jpa.defer-datasource-initialization=true
+      #spring.sql.init.mode=always
+      #
+      #spring.jpa.open-in-view=false
+
+
+
+
+
+
+
+

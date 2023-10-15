@@ -35,10 +35,10 @@ public class User {
     @Column(name = "registration_date",columnDefinition = "TIMESTAMP default now()")
     LocalDateTime registrationDate = LocalDateTime.now();
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
     Account account;
 
-    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user")
     Set<Review> reviews;
 }
