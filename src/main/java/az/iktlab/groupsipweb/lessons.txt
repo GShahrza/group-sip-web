@@ -116,3 +116,4 @@
 9.	Fix authorization constraints over individual methods of service beans, in lieu of URL authorization or in tandem with it
 10.	Bearer tokens
 11.	JWT
+12. Authentication, Authorization, GrantedAuthority, Role, Principal

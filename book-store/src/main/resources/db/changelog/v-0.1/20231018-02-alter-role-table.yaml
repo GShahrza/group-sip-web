@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023101802
+      author: shahrzagahramanov
+      changes:
+        - addColumn:
+            tableName: roles
+            columns:
+              - column:
+                  name: example
+                  type: VARCHAR(25)
