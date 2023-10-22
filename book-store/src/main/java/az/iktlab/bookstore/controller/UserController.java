@@ -6,6 +6,7 @@ import az.iktlab.bookstore.model.dto.response.UserResponseDTO;
 import az.iktlab.bookstore.model.entity.User;
 import az.iktlab.bookstore.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -15,15 +16,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping(path = "/users")
 public class UserController {
-
     private final UserService userService;
-
     @PostMapping
     public boolean addUser(@Valid @RequestBody SignUpRequestDTO signUpRequestDTO) {
         return userService.addUser(signUpRequestDTO);
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<UserResponseDTO> getAllUsers(@RequestParam(defaultValue = "0") int page,
                                   @RequestParam(defaultValue = "2") int size) {
         return userService.getAllUsers(page, size);

@@ -29,7 +29,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account add(SignUpRequestDTO signUpRequestDTO) {
-        Role role = roleService.findByName(ERole.USER);
+        Role role = roleService.findByName(ERole.ROLE_USER);
 
         if(!accountRepository.existsByUsername(signUpRequestDTO.getUsername())) {
             Account account = accountMapper.signUpRequestDTOtoAccount(signUpRequestDTO);

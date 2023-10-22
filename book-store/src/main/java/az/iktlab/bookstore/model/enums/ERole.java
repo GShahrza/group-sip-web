@@ -2,7 +2,7 @@ package az.iktlab.bookstore.model.enums;
 
 public enum ERole {
 
-    ADMIN,
-    MODERATOR,
-    USER
+    ROLE_ADMIN,
+    ROLE_MODERATOR,
+    ROLE_USER
 }

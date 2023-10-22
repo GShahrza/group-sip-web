@@ -1,13 +1,17 @@
 insert into roles(role_name)
-values ('ADMIN'),
-       ('MODERATOR'),
-       ('USER');
+values ('ROLE_ADMIN'),
+       ('ROLE_MODERATOR'),
+       ('ROLE_USER');
 
+-- 123456
+-- 612831
+-- 874213
+-- 7989456
 insert into accounts(username,password)
-values ('gshahrza','123456'),
-       ('maqsud13','612831'),
-       ('yusif99','874213'),
-       ('afarid','7989456'),
+values ('gshahrza','$2a$12$P7YV1US9MbkQcwNcgfoOfe.bbIMMC3YLP7vPpzOmMd.LUwy3ZT0C.'),
+       ('maqsud13','$2a$12$mSP.C6GTcdm4sIrLORHcaeNp6jSAswAafeiCMxVl/vvchGEU3vSea'),
+       ('yusif99','$2a$12$IPqOk48.kD/YS9thKxOUwuluaaG6INqlEqX6qs0oxEPBQ9v6bm/Xa'),
+       ('afarid','$2a$12$VxKzKQbYGpasaJGASAyuM.bcYoN2CfV8lOQvEEMdc6e/GYxpaG..q'),
        ('asgarov12','124891'),
        ('zaman01','414124123'),
        ('aliyevali','19421091'),

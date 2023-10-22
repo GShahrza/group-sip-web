@@ -52,4 +52,10 @@ public class ReviewServiceImpl implements ReviewService {
                 .map(reviewMapper::reviewToReviewResponseDTO)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public ReviewResponseDTO getReviewById(Long id) {
+        return reviewMapper.reviewToReviewResponseDTO(reviewRepository
+                .findById(id).orElseThrow());
+    }
 }
