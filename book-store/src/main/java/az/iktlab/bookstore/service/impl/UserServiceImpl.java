@@ -11,6 +11,8 @@ import az.iktlab.bookstore.repository.UserRepository;
 import az.iktlab.bookstore.service.AccountService;
 import az.iktlab.bookstore.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -27,6 +29,8 @@ public class UserServiceImpl implements UserService {
 
     private final AccountService accountService;
 
+    private final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     private final UserMapper userMapper;
 
     public List<UserResponseDTO> getAllUsers(int page, int size) {
@@ -38,7 +42,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDTO getUserById(Long id) {
-        User user = userRepository.findById(id).orElseThrow(() ->new UserNotFoundException("user not found"));
+        User user = userRepository.findById(id).orElseThrow(
+                () ->{
+                    logger.error(String.format("User id: %d not found",id));
+                    return new UserNotFoundException("user not found");
+                }
+        );
+
+        logger.info(String.format("User id:%d called",id));
+
         UserResponseDTO userResponseDTO = userMapper.userToUserResponseDTO(user);
         return userResponseDTO;
     }

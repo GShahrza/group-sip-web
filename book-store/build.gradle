@@ -31,6 +31,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-validation:2.7.16'
 
+    // https://mvnrepository.com/artifact/org.springframework.vault/spring-vault-core
+    implementation group: 'org.springframework.vault', name: 'spring-vault-core', version: '3.0.4'
+
+
 
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'io.github.openfeign:feign-httpclient:12.4'

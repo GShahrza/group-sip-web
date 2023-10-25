@@ -1,4 +1,24 @@
+#  spring.cloud.vault.kv.enabled=true
+#
+#    spring.cloud.vault.enabled=true
+#
+#    spring.cloud.vault.authentication=token
+#    spring.cloud.vault.token=${VAULT_TOKEN}
+#
+#    spring.config.import=optional:vault://
+#    spring.cloud.vault.uri=${VAULT_ADDR}
+#
+#    spring.cloud.vault.kv.default-context=dev
 spring:
+  config:
+    import: optional:vault://
+  cloud:
+    vault:
+      authentication: token
+      token: 18456350-7b89-11ed-85e9-a5830358e351
+      uri: http://localhost:8200
+      kv:
+        default-context: dev
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -15,6 +35,8 @@ spring:
   liquibase:
     enabled: false
     change-log: classpath:db/changelog/db.changelog-master.yaml
+
+secret: ${secret.key:example}
 
     #spring.datasource.url= jdbc:postgresql://localhost:5432/postgres
       #spring.datasource.username=postgres
