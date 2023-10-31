@@ -15,10 +15,11 @@ spring:
   cloud:
     vault:
       authentication: token
-      token: 18456350-7b89-11ed-85e9-a5830358e351
+      token: ${VAULT_TOKEN}
       uri: http://localhost:8200
       kv:
         default-context: dev
+      enabled: true
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -36,22 +37,9 @@ spring:
     enabled: false
     change-log: classpath:db/changelog/db.changelog-master.yaml
 
-secret: ${secret.key:example}
+secret: ${secret.key}
 
-    #spring.datasource.url= jdbc:postgresql://localhost:5432/postgres
-      #spring.datasource.username=postgres
-      #spring.datasource.password=qweR
-      #
-      #spring.jpa.hibernate.ddl-auto=create
-      #spring.jpa.show-sql=true
-      #
-      #spring.jpa.defer-datasource-initialization=true
-      #spring.sql.init.mode=always
-      #
-      #spring.jpa.open-in-view=false
-
-
-
+#  secretKeyExampleForJsonWebTokenAndSecurityServiceAndForUserJwtServiceForCreateJsonWebToken
 
 
 
