@@ -1,14 +1,3 @@
-#  spring.cloud.vault.kv.enabled=true
-#
-#    spring.cloud.vault.enabled=true
-#
-#    spring.cloud.vault.authentication=token
-#    spring.cloud.vault.token=${VAULT_TOKEN}
-#
-#    spring.config.import=optional:vault://
-#    spring.cloud.vault.uri=${VAULT_ADDR}
-#
-#    spring.cloud.vault.kv.default-context=dev
 spring:
   config:
     import: optional:vault://
@@ -19,11 +8,11 @@ spring:
       uri: http://localhost:8200
       kv:
         default-context: dev
-      enabled: true
+      enabled: false
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://db:5432/postgres
     username: postgres
-    password: qweR
+    password: password
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -37,7 +26,7 @@ spring:
     enabled: false
     change-log: classpath:db/changelog/db.changelog-master.yaml
 
-secret: ${secret.key}
+secret: secretKeyExampleForJsonWebTokenAndSecurityServiceAndForUserJwtServiceForCreateJsonWebToken
 
 #  secretKeyExampleForJsonWebTokenAndSecurityServiceAndForUserJwtServiceForCreateJsonWebToken
 
